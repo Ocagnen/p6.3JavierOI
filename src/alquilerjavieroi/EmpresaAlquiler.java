@@ -169,7 +169,7 @@ public class EmpresaAlquiler {
     // al total de clientes cada vez que se ejecute.
     public void registrarCliente(Cliente nuevo) {
 
-        this.clientes[this.totalClientes] = nuevo;
+        this.clientes.add(nuevo);
 
         this.totalClientes++;
 
@@ -177,9 +177,9 @@ public class EmpresaAlquiler {
 
     // Método para añadir vehículos a la empresa. Mismo funcionamiento que
     // método registrarCliente().
-    public void registrarVehiculo(Vehiculo nuevo) {
+     public void registrarVehiculo(Vehiculo nuevo) {
 
-        this.vehiculos[this.totalVehiculos] = nuevo;
+        this.vehiculos.add(nuevo);
 
         this.totalVehiculos++;
     }
