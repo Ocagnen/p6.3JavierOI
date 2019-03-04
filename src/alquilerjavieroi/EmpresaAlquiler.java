@@ -87,18 +87,21 @@ public class EmpresaAlquiler {
         }
     }
 
-    public void ordenarBurVehi() {
+    public void ordenarCatalogoVehiculos() {
 
         int igual;
         Vehiculo v;
+        Vehiculo v2;
 
-        for (int i = 0; i < this.vehiculos.length - 1; i++) {
-            for (int j = i + 1; j < this.vehiculos.length; j++) {
-                igual = this.vehiculos[i].getMatricula().compareTo(this.vehiculos[j].getMatricula());
+        for (int i = 0; i < this.totalVehiculos - 1; i++) {
+            for (int j = i + 1; j < this.totalVehiculos; j++) {
+                igual = this.vehiculos.get(i).getMatricula().compareTo(this.vehiculos.get(j).getMatricula());
+
                 if (igual > 0) {
-                    v = this.vehiculos[i];
-                    this.vehiculos[i] = this.vehiculos[j];
-                    this.vehiculos[j] = v;
+                    v = this.vehiculos.get(i);
+                    v2 = this.vehiculos.get(j);
+                    this.vehiculos.set(i, v2);
+                    this.vehiculos.set(j, v);
 
                 }
             }
