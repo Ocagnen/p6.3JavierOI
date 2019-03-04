@@ -66,18 +66,21 @@ public class EmpresaAlquiler {
         this.alquileres = alquileres;
     }
 
-    public void ordenarBurClient() {
+    public void ordenarCarteraClientes() {
 
         int igual;
         Cliente c;
+        Cliente c2;
 
-        for (int i = 0; i < this.clientes.length - 1; i++) {
-            for (int j = i + 1; j < this.clientes.length; j++) {
-                igual = this.clientes[i].getNif().compareTo(this.clientes[j].getNif());
+        for (int i = 0; i < this.totalClientes - 1; i++) {
+            for (int j = i + 1; j < this.totalClientes; j++) {
+                igual = this.clientes.get(i).getNif().compareTo(this.clientes.get(j).getNif());
                 if (igual > 0) {
-                    c = this.clientes[i];
-                    this.clientes[i] = this.clientes[j];
-                    this.clientes[j] = c;
+
+                    c = this.clientes.get(i);
+                    c2 = this.clientes.get(j);
+                    this.clientes.set(i, c2);
+                    this.clientes.set(j, c);
 
                 }
             }
