@@ -285,7 +285,8 @@ public class EmpresaAlquiler {
 
         if (vehiculo.isDisponible()) {
             vehiculo.setDisponible(false);
-            this.alquileres[this.totalAlquileres] = new VehiculoAlquilado(cliente, vehiculo, diaHoy(), mesHoy(), anioHoy(), dias);
+            VehiculoAlquilado v = new VehiculoAlquilado(cliente, vehiculo, diaHoy(), mesHoy(), anioHoy(), dias);
+            this.alquileres.add(v);
 
             this.totalAlquileres++;
         }
