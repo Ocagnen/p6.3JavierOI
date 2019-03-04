@@ -42,7 +42,7 @@ public class Main {
         easydrive.alquilarVehiculo(nif, matricula, diasAlq);
 
         // Mostrar alquiler
-        if (easydrive.getTotalAlquileres() != 0) {
+        if (easydrive.getTotalAlquileres() != 0 && easydrive.obtenerCliente(nif)!=-1) {
             System.out.println(easydrive.getAlquileres());
         } else {
             System.out.println("No existe ningún alquiler en el sistema");
@@ -72,7 +72,7 @@ public class Main {
         if (easydrive.obtenerVehiculo(matricula2) == -1) {
             System.out.println("El vehiculo no está en el sistema");
         } else {
-            System.out.println(nif3 + " está en el array y está en la posición " + easydrive.obtenerVehiculo(matricula2));
+            System.out.println(matricula2 + " está en el array y está en la posición " + easydrive.obtenerVehiculo(matricula2));
         }
 
     }
