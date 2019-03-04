@@ -110,15 +110,14 @@ public class EmpresaAlquiler {
 
     public int obtenerCliente(String nif) {
         System.out.println("");
-        ordenarBurClient();
+        ordenarCarteraClientes();
         int igual;
-        int n = this.clientes.length;
+        int n = this.clientes.size();
         int centro, inf = 0, sup = n - 1;
         while (inf <= sup) {
             centro = (sup + inf) / 2;
-            igual = this.clientes[centro].getNif().compareTo(nif);
-            if (igual == 0) {
-                System.out.println(nif + " está en el array y está en la posición " + centro);
+            igual = this.clientes.get(centro).getNif().compareTo(nif);
+            if (igual == 0) {                
                 return centro;
             } else if (igual > 0) {
                 sup = centro - 1;
@@ -127,7 +126,7 @@ public class EmpresaAlquiler {
             }
 
         }
-
+        
         return -1;
 
     }
