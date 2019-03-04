@@ -37,24 +37,24 @@ public class EmpresaAlquiler {
     // Establecerá el número de clientes,vehículos y alquileres en 0.
     // Determinará que el máximo número de clientes y vehículos será 50, mientras que
     // el número de alquileres será 100.    
-    public EmpresaAlquiler(String cif, String nombre, String paginaWeb) {
+     public EmpresaAlquiler(String cif, String nombre, String paginaWeb) {
         this.cif = cif;
         this.nombre = nombre;
         this.paginaWeb = paginaWeb;
 
         this.totalClientes = 0;
-        this.clientes = new Cliente[50];
+        this.clientes = new ArrayList<>();
 
         this.totalVehiculos = 0;
-        this.vehiculos = new Vehiculo[50];
+        this.vehiculos = new ArrayList<>();
 
         this.totalAlquileres = 0;
-        this.alquileres = new VehiculoAlquilado[100];
+        this.alquileres = new ArrayList<>();
 
     }
 
     // Constructor parametrizado pero que se le pasen todos los atributos.
-    public EmpresaAlquiler(String cif, String nombre, String paginaWeb, int totalClientes, Cliente[] clientes, int totalVehiculos, Vehiculo[] vehiculos, int totalAlquileres, VehiculoAlquilado[] alquileres) {
+     public EmpresaAlquiler(String cif, String nombre, String paginaWeb, int totalClientes, ArrayList clientes, int totalVehiculos, ArrayList vehiculos, int totalAlquileres, ArrayList alquileres) {
         this.cif = cif;
         this.nombre = nombre;
         this.paginaWeb = paginaWeb;
