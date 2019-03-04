@@ -151,15 +151,15 @@ public class EmpresaAlquiler {
     }
 
     public void rellenarClientes() {
-        int clientesExistentes = this.totalClientes;
-        for (int i = 0; i < this.clientes.length - clientesExistentes; i++) {
+
+        for (int i = 0; i < 25; i++) {
             registrarCliente(Cliente.generarCliente());
         }
     }
 
     public void rellenarVehiculos() {
-        int vehiculosExistentes = this.totalVehiculos;
-        for (int i = 0; i < this.vehiculos.length - vehiculosExistentes; i++) {
+
+        for (int i = 0; i < 25; i++) {
             registrarVehiculo(Vehiculo.crearVehiculoAlt());
         }
     }
