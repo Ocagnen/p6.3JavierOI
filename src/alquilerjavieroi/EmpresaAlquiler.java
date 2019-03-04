@@ -223,8 +223,8 @@ public class EmpresaAlquiler {
     // if else dentro de éste que devolverá el cliente cuando lo encuentre.
     private Cliente getCliente(String nif) {
         for (int i = 0; i < this.totalClientes; i++) {
-            if (this.clientes[i].getNif().equals(nif)) {
-                return this.clientes[i];
+            if (this.clientes.get(i).getNif().equals(nif)) {
+                return this.clientes.get(i);
             }
         }
         return null;
@@ -236,8 +236,8 @@ public class EmpresaAlquiler {
 
         for (int i = 0; i < this.totalVehiculos; i++) {
 
-            if (this.vehiculos[i].getMatricula().equals(matricula)) {
-                return this.vehiculos[i];
+            if (this.vehiculos.get(i).getMatricula().equals(matricula)) {
+                return this.vehiculos.get(i);
             }
         }
 
