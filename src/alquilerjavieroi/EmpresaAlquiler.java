@@ -6,6 +6,7 @@
 package alquilerjavieroi;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,17 +21,17 @@ public class EmpresaAlquiler {
     // Atributos para determinar el número de clientes de la empresa y array 
     // para almacenarlos
     private int totalClientes;
-    private Cliente[] clientes;
+    private ArrayList<Cliente> clientes;
 
     // Atributos para determinar el número total de vehículos de la empresa
     // y array para almacenarlos
     private int totalVehiculos;
-    private Vehiculo[] vehiculos;
+    private ArrayList<Vehiculo> vehiculos;
 
     // Atributos para determinar el número total de alquileres de la empresa
     // y array para almacenarlos
     private int totalAlquileres;
-    private VehiculoAlquilado[] alquileres;
+    private ArrayList<VehiculoAlquilado> alquileres;
 
     // Constructor parametrizado. Se le pasará cif,nombre y página web de empresa.
     // Establecerá el número de clientes,vehículos y alquileres en 0.
