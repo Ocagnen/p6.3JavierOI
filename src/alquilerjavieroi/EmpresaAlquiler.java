@@ -192,7 +192,7 @@ public class EmpresaAlquiler {
         System.out.println("");
 
         for (int i = 0; i < this.totalClientes; i++) {
-            System.out.println(clientes[i].toString());
+            System.out.println(this.clientes.get(i).toString());
         }
     }
 
@@ -203,18 +203,18 @@ public class EmpresaAlquiler {
         System.out.println("");
 
         for (int i = 0; i < this.totalVehiculos; i++) {
-            System.out.println(vehiculos[i].toString());
+            System.out.println(this.vehiculos.get(i).toString());
         }
     }
     
-    public void imprimirAlquileres(){
-        
+    public void imprimirAlquileres() {
+
         System.out.println("");
-        
+
         for (int i = 0; i < this.totalAlquileres; i++) {
-            System.out.println(alquileres[i].toString());
+            System.out.println(this.alquileres.get(i).toString());
         }
-        
+
     }
 
     // Método privado. Se le pasará un nif y te devolverá el Cliente que
