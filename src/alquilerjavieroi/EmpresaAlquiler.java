@@ -340,11 +340,11 @@ public class EmpresaAlquiler {
         this.totalClientes = totalClientes;
     }
 
-    public Cliente[] getClientes() {
+    public ArrayList<Cliente> getClientes() {
         return clientes;
     }
 
-    public void setClientes(Cliente[] clientes) {
+    public void setClientes(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
     }
 
@@ -356,11 +356,11 @@ public class EmpresaAlquiler {
         this.totalVehiculos = totalVehiculos;
     }
 
-    public Vehiculo[] getVehiculos() {
+    public ArrayList<Vehiculo> getVehiculos() {
         return vehiculos;
     }
 
-    public void setVehiculos(Vehiculo[] vehiculos) {
+    public void setVehiculos(ArrayList<Vehiculo> vehiculos) {
         this.vehiculos = vehiculos;
     }
 
@@ -372,11 +372,11 @@ public class EmpresaAlquiler {
         this.totalAlquileres = totalAlquileres;
     }
 
-    public VehiculoAlquilado[] getAlquileres() {
+    public ArrayList<VehiculoAlquilado> getAlquileres() {
         return alquileres;
     }
 
-    public void setAlquileres(VehiculoAlquilado[] alquileres) {
+    public void setAlquileres(ArrayList<VehiculoAlquilado> alquileres) {
         this.alquileres = alquileres;
     }
     
