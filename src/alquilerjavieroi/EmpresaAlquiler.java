@@ -133,15 +133,14 @@ public class EmpresaAlquiler {
 
     public int obtenerVehiculo(String matricula) {
         System.out.println("");
-        ordenarBurVehi();
+        ordenarCatalogoVehiculos();
         int igual;
-        int n = this.vehiculos.length;
+        int n = this.vehiculos.size();
         int centro, inf = 0, sup = n - 1;
         while (inf <= sup) {
             centro = (sup + inf) / 2;
-            igual = this.vehiculos[centro].getMatricula().compareTo(matricula);
-            if (igual == 0) {
-                System.out.println(matricula + " está en el array y está en la posición " + centro);
+            igual = this.vehiculos.get(centro).getMatricula().compareTo(matricula);
+            if (igual == 0) {                
                 return centro;
             } else if (igual > 0) {
                 sup = centro - 1;
@@ -150,7 +149,7 @@ public class EmpresaAlquiler {
             }
 
         }
-
+        
         return -1;
 
     }
